@@ -1,0 +1,3 @@
+# FlashcardAutomater
+
+Work in progress...
