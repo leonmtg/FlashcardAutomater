@@ -17,6 +17,10 @@
 		35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */; };
 		35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */; };
 		35CAFE522A65308300FC4236 /* FreeDictionaryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */; };
+		35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE532A654F4F00FC4236 /* Entry.swift */; };
+		35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE552A654FA800FC4236 /* Phonetic.swift */; };
+		35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE572A65515C00FC4236 /* Meaning.swift */; };
+		35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE592A65518000FC4236 /* Definition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryService.swift; sourceTree = "<group>"; };
 		35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryServiceProtocol.swift; sourceTree = "<group>"; };
 		35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryServiceTests.swift; sourceTree = "<group>"; };
+		35CAFE532A654F4F00FC4236 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		35CAFE552A654FA800FC4236 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
+		35CAFE572A65515C00FC4236 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		35CAFE592A65518000FC4236 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 			children = (
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
 				35CAFE232A65162000FC4236 /* ContentView.swift */,
+				35CAFE532A654F4F00FC4236 /* Entry.swift */,
+				35CAFE552A654FA800FC4236 /* Phonetic.swift */,
+				35CAFE572A65515C00FC4236 /* Meaning.swift */,
+				35CAFE592A65518000FC4236 /* Definition.swift */,
 				35CAFE4C2A65288B00FC4236 /* Services */,
 				35CAFE252A65162100FC4236 /* Assets.xcassets */,
 				35CAFE272A65162100FC4236 /* FlashcardAutomater.entitlements */,
@@ -276,9 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */,
+				35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */,
 				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
 				35CAFE242A65162000FC4236 /* ContentView.swift in Sources */,
+				35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */,
 				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
+				35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */,
 				35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
