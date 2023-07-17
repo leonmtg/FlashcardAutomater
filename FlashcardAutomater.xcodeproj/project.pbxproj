@@ -14,6 +14,9 @@
 		35CAFE342A65162100FC4236 /* FlashcardAutomaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE332A65162100FC4236 /* FlashcardAutomaterTests.swift */; };
 		35CAFE3E2A65162100FC4236 /* FlashcardAutomaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE3D2A65162100FC4236 /* FlashcardAutomaterUITests.swift */; };
 		35CAFE402A65162100FC4236 /* FlashcardAutomaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE3F2A65162100FC4236 /* FlashcardAutomaterUITestsLaunchTests.swift */; };
+		35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */; };
+		35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */; };
+		35CAFE522A65308300FC4236 /* FreeDictionaryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		35CAFE392A65162100FC4236 /* FlashcardAutomaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardAutomaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE3D2A65162100FC4236 /* FlashcardAutomaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterUITests.swift; sourceTree = "<group>"; };
 		35CAFE3F2A65162100FC4236 /* FlashcardAutomaterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryService.swift; sourceTree = "<group>"; };
+		35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryServiceProtocol.swift; sourceTree = "<group>"; };
+		35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDictionaryServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			children = (
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
 				35CAFE232A65162000FC4236 /* ContentView.swift */,
+				35CAFE4C2A65288B00FC4236 /* Services */,
 				35CAFE252A65162100FC4236 /* Assets.xcassets */,
 				35CAFE272A65162100FC4236 /* FlashcardAutomater.entitlements */,
 				35CAFE282A65162100FC4236 /* Preview Content */,
@@ -116,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				35CAFE332A65162100FC4236 /* FlashcardAutomaterTests.swift */,
+				35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */,
 			);
 			path = FlashcardAutomaterTests;
 			sourceTree = "<group>";
@@ -127,6 +135,15 @@
 				35CAFE3F2A65162100FC4236 /* FlashcardAutomaterUITestsLaunchTests.swift */,
 			);
 			path = FlashcardAutomaterUITests;
+			sourceTree = "<group>";
+		};
+		35CAFE4C2A65288B00FC4236 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */,
+				35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
 				35CAFE242A65162000FC4236 /* ContentView.swift in Sources */,
+				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
 				35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CAFE522A65308300FC4236 /* FreeDictionaryServiceTests.swift in Sources */,
 				35CAFE342A65162100FC4236 /* FlashcardAutomaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
