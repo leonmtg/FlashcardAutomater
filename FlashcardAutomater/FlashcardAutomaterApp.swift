@@ -11,7 +11,7 @@ import SwiftUI
 struct FlashcardAutomaterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardsView()
         }
     }
 }
