@@ -32,6 +32,20 @@ final class LookUpOOTests: XCTestCase {
         }
     }
     
+    func test_loopLookUpFetchedEntries() async {
+        let inputs = ["hello", "entertainment", "put on", "work", "fight", "yes", "what", "frankness", "candour"]
+        
+        for input in inputs {
+            do {
+                let entries = try await lookUpOO.lookUp(with: input)
+                XCTAssertTrue(entries.count > 0, "Should Have Entries!")
+            } catch {
+                print(input)
+                XCTAssertNil(error)
+            }
+        }
+    }
+    
     func test_lookUpCatchedErrors() async {
         let input = "xxxxxxxxxx"
         do {

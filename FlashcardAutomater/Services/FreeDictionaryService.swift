@@ -33,11 +33,11 @@ extension FreeDictionaryService: FreeDictionaryServiceProtocol {
                 }
                 
                 if (400...499).contains(httpResponse.statusCode) {
-                    throw HTTPResponseError.clientError
+                    throw HTTPResponseError.clientError(statusCode: httpResponse.statusCode)
                 }
                 
                 if (500...599).contains(httpResponse.statusCode) {
-                    throw HTTPResponseError.serverError
+                    throw HTTPResponseError.serverError(statusCode: httpResponse.statusCode)
                 }
                 
                 return data
@@ -46,8 +46,8 @@ extension FreeDictionaryService: FreeDictionaryServiceProtocol {
             .mapError { error -> HTTPResponseError in
                 if let httpResponseError = error as? HTTPResponseError {
                     return httpResponseError
-                } else if error is DecodingError {
-                    return HTTPResponseError.decodeError
+                } else if let decodeError = error as? DecodingError {
+                    return HTTPResponseError.decodeError(error: decodeError)
                 } else {
                     return HTTPResponseError.unknown
                 }

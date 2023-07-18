@@ -9,7 +9,7 @@ import Foundation
 
 struct Entry: Decodable {
     var word: String
-    var phonetic: Phonetic?
+    var phonetic: String?
     var phonetics: [Phonetic]
     var meanings: [Meaning]
     var origin: String?

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350AB22B2A667030009D3D43 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB22A2A667030009D3D43 /* HTTPResponseError.swift */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE242A65162000FC4236 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE232A65162000FC4236 /* ContentView.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350AB22A2A667030009D3D43 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardAutomater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterApp.swift; sourceTree = "<group>"; };
 		35CAFE232A65162000FC4236 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
 				35CAFE232A65162000FC4236 /* ContentView.swift */,
 				35CAFE5B2A655A3900FC4236 /* LookUpOO.swift */,
+				350AB22A2A667030009D3D43 /* HTTPResponseError.swift */,
 				350AB2292A666C82009D3D43 /* DataObjects */,
 				35CAFE4C2A65288B00FC4236 /* Services */,
 				35CAFE252A65162100FC4236 /* Assets.xcassets */,
@@ -305,6 +308,7 @@
 				35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */,
 				35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */,
 				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
+				350AB22B2A667030009D3D43 /* HTTPResponseError.swift in Sources */,
 				35CAFE242A65162000FC4236 /* ContentView.swift in Sources */,
 				35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */,
 				35CAFE5C2A655A3900FC4236 /* LookUpOO.swift in Sources */,

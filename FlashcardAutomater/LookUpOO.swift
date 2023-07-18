@@ -18,15 +18,15 @@ class LookUpOO: ObservableObject {
     private var currentInput: String?
     @Published var entries: [Entry] = []
     @Published var errorForView: ErrorForView?
-    var fetching = false
+    @Published var fetching = false
+    @MainActor @Published var loading = false
     
     init(service: FreeDictionaryServiceProtocol = FreeDictionaryService()) {
         self.service = service
-        
-//        $entries.combineLatest($errorForView) { (entries, error) in
-//          return entries.isEmpty && error == nil
-//        }
-//        .assign(to: &$fetching)
+
+        $fetching
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$loading)
     }
     
     func lookUp(with input: String) {
