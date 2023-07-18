@@ -24,7 +24,7 @@ struct FreeDictionaryService {
 }
 
 extension FreeDictionaryService: FreeDictionaryServiceProtocol {
-    func entriesPublisher(for input: String) -> AnyPublisher<Data, HTTPResponseError> {
+    func entriesPublisher(for input: String) -> AnyPublisher<[Entry], HTTPResponseError> {
         URLSession.shared
             .dataTaskPublisher(for: url(for: input))
             .tryMap { data, response in
@@ -42,9 +42,12 @@ extension FreeDictionaryService: FreeDictionaryServiceProtocol {
                 
                 return data
             }
+            .decode(type: [Entry].self, decoder: JSONDecoder())
             .mapError { error -> HTTPResponseError in
                 if let httpResponseError = error as? HTTPResponseError {
                     return httpResponseError
+                } else if error is DecodingError {
+                    return HTTPResponseError.decodeError
                 } else {
                     return HTTPResponseError.unknown
                 }
@@ -52,7 +55,7 @@ extension FreeDictionaryService: FreeDictionaryServiceProtocol {
             .eraseToAnyPublisher()
     }
     
-    func lookUpEntries(with input: String) async throws -> Data {
+    func lookUpEntries(with input: String) async throws -> [Entry] {
         let asyncSequence = entriesPublisher(for: input).values
         
         for try await value in asyncSequence {
@@ -60,6 +63,6 @@ extension FreeDictionaryService: FreeDictionaryServiceProtocol {
         }
         
         assertionFailure("We should never arrive here!")
-        return Data()
+        return []
     }
 }

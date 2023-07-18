@@ -90,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350AB2292A666C82009D3D43 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				35CAFE532A654F4F00FC4236 /* Entry.swift */,
+				35CAFE552A654FA800FC4236 /* Phonetic.swift */,
+				35CAFE572A65515C00FC4236 /* Meaning.swift */,
+				35CAFE592A65518000FC4236 /* Definition.swift */,
+			);
+			path = DataObjects;
+			sourceTree = "<group>";
+		};
 		35CAFE152A65162000FC4236 = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +127,7 @@
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
 				35CAFE232A65162000FC4236 /* ContentView.swift */,
 				35CAFE5B2A655A3900FC4236 /* LookUpOO.swift */,
-				35CAFE532A654F4F00FC4236 /* Entry.swift */,
-				35CAFE552A654FA800FC4236 /* Phonetic.swift */,
-				35CAFE572A65515C00FC4236 /* Meaning.swift */,
-				35CAFE592A65518000FC4236 /* Definition.swift */,
+				350AB2292A666C82009D3D43 /* DataObjects */,
 				35CAFE4C2A65288B00FC4236 /* Services */,
 				35CAFE252A65162100FC4236 /* Assets.xcassets */,
 				35CAFE272A65162100FC4236 /* FlashcardAutomater.entitlements */,

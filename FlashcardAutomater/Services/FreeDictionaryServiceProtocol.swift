@@ -17,6 +17,6 @@ enum HTTPResponseError: String, Error {
 
 
 protocol FreeDictionaryServiceProtocol {
-    func entriesPublisher(for input: String) -> AnyPublisher<Data, HTTPResponseError>
-    func lookUpEntries(with input: String) async throws -> Data
+    func entriesPublisher(for input: String) -> AnyPublisher<[Entry], HTTPResponseError>
+    func lookUpEntries(with input: String) async throws -> [Entry]
 }

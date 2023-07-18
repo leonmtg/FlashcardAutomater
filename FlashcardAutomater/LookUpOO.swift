@@ -41,10 +41,6 @@ class LookUpOO: ObservableObject {
                 await MainActor.run {
                     self.errorForView = ErrorForView(message: error.localizedDescription)
                 }
-            } catch is DecodingError {
-                await MainActor.run {
-                    self.errorForView = ErrorForView(message: "Decode Error.")
-                }
             } catch {
                 await MainActor.run {
                     self.errorForView = ErrorForView(message: "Unknown Error.")
@@ -63,9 +59,7 @@ class LookUpOO: ObservableObject {
         defer {
             fetching = false
         }
-        
-        let jsonData = try await self.service.lookUpEntries(with: input)
-        
-        return try JSONDecoder().decode([Entry].self, from: jsonData)
+                
+        return  try await self.service.lookUpEntries(with: input)
     }
 }

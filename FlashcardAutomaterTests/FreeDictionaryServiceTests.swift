@@ -26,7 +26,7 @@ final class FreeDictionaryServiceTests: XCTestCase {
     }
     
     func test_entriesPublisherHasData() {
-        var data: Data?
+        var entries: [Entry] = []
         var error: HTTPResponseError?
         let expectation = self.expectation(description: "Fetch Entry")
         
@@ -40,14 +40,14 @@ final class FreeDictionaryServiceTests: XCTestCase {
                 }
                 
                 expectation.fulfill()
-            } receiveValue: { theData in
-                data = theData
+            } receiveValue: { data in
+                entries = data
             }
             .store(in: &subscriptions)
 
         waitForExpectations(timeout: 5)
         
         XCTAssertNil(error)
-        XCTAssertNotNil(data)
+        XCTAssertTrue(entries.count > 0)
     }
 }
