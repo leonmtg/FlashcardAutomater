@@ -8,9 +8,9 @@
 import Foundation
 
 enum HTTPResponseError: Error {
-    case clientError(statusCode: Int)
-    case serverError(statusCode: Int)
-    case decodeError(error: DecodingError)
+    case clientError(_ statusCode:Int)
+    case serverError(_ statusCode: Int)
+    case decodeError(_ error: DecodingError)
     case unknown
 }
 
