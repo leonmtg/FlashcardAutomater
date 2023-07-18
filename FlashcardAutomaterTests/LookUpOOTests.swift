@@ -38,7 +38,7 @@ final class LookUpOOTests: XCTestCase {
             let entries = try await lookUpOO.lookUp(with: input)
             XCTAssertFalse(entries.count > 0, "Should NOT Have Entries!")
         } catch {
-            print(error)
+            print(error.localizedDescription)
             XCTAssertNotNil(error)
         }
     }

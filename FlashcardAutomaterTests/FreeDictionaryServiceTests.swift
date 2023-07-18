@@ -27,7 +27,7 @@ final class FreeDictionaryServiceTests: XCTestCase {
     
     func test_entriesPublisherHasData() {
         var data: Data?
-        var error: URLError?
+        var error: HTTPResponseError?
         let expectation = self.expectation(description: "Fetch Entry")
         
         service.entriesPublisher(for: "hello")

@@ -37,9 +37,9 @@ class LookUpOO: ObservableObject {
                 await MainActor.run {
                     self.entries = fetchedEntries
                 }
-            } catch is URLError {
+            } catch let error as HTTPResponseError {
                 await MainActor.run {
-                    self.errorForView = ErrorForView(message: "Network Error.")
+                    self.errorForView = ErrorForView(message: error.localizedDescription)
                 }
             } catch is DecodingError {
                 await MainActor.run {

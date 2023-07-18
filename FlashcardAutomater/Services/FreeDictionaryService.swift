@@ -24,10 +24,31 @@ struct FreeDictionaryService {
 }
 
 extension FreeDictionaryService: FreeDictionaryServiceProtocol {
-    func entriesPublisher(for input: String) -> AnyPublisher<Data, URLError> {
+    func entriesPublisher(for input: String) -> AnyPublisher<Data, HTTPResponseError> {
         URLSession.shared
             .dataTaskPublisher(for: url(for: input))
-            .map(\.data)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw HTTPResponseError.unknown
+                }
+                
+                if (400...499).contains(httpResponse.statusCode) {
+                    throw HTTPResponseError.clientError
+                }
+                
+                if (500...599).contains(httpResponse.statusCode) {
+                    throw HTTPResponseError.serverError
+                }
+                
+                return data
+            }
+            .mapError { error -> HTTPResponseError in
+                if let httpResponseError = error as? HTTPResponseError {
+                    return httpResponseError
+                } else {
+                    return HTTPResponseError.unknown
+                }
+            }
             .eraseToAnyPublisher()
     }
     
