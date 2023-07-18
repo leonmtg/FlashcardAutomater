@@ -25,12 +25,12 @@ final class FreeDictionaryServiceTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_entryPublisherToValid() {
+    func test_entriesPublisherHasData() {
         var data: Data?
         var error: URLError?
         let expectation = self.expectation(description: "Fetch Entry")
         
-        service.entryPublisher(for: "hello")
+        service.entriesPublisher(for: "hello")
             .sink { completion in
                 switch completion {
                 case .finished:

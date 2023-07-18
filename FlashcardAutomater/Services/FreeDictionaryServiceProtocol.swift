@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 protocol FreeDictionaryServiceProtocol {
-    func entryPublisher(for entry: String) -> AnyPublisher<Data, URLError>
+    func entriesPublisher(for input: String) -> AnyPublisher<Data, URLError>
+    func lookUpEntries(with input: String) async throws -> Data
 }

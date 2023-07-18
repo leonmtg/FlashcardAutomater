@@ -21,6 +21,8 @@
 		35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE552A654FA800FC4236 /* Phonetic.swift */; };
 		35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE572A65515C00FC4236 /* Meaning.swift */; };
 		35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE592A65518000FC4236 /* Definition.swift */; };
+		35CAFE5C2A655A3900FC4236 /* LookUpOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE5B2A655A3900FC4236 /* LookUpOO.swift */; };
+		35CAFE5E2A66591B00FC4236 /* LookUpOOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE5D2A66591B00FC4236 /* LookUpOOTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		35CAFE552A654FA800FC4236 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
 		35CAFE572A65515C00FC4236 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		35CAFE592A65518000FC4236 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		35CAFE5B2A655A3900FC4236 /* LookUpOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpOO.swift; sourceTree = "<group>"; };
+		35CAFE5D2A66591B00FC4236 /* LookUpOOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpOOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
 				35CAFE232A65162000FC4236 /* ContentView.swift */,
+				35CAFE5B2A655A3900FC4236 /* LookUpOO.swift */,
 				35CAFE532A654F4F00FC4236 /* Entry.swift */,
 				35CAFE552A654FA800FC4236 /* Phonetic.swift */,
 				35CAFE572A65515C00FC4236 /* Meaning.swift */,
@@ -136,6 +141,7 @@
 			children = (
 				35CAFE332A65162100FC4236 /* FlashcardAutomaterTests.swift */,
 				35CAFE512A65308300FC4236 /* FreeDictionaryServiceTests.swift */,
+				35CAFE5D2A66591B00FC4236 /* LookUpOOTests.swift */,
 			);
 			path = FlashcardAutomaterTests;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
 				35CAFE242A65162000FC4236 /* ContentView.swift in Sources */,
 				35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */,
+				35CAFE5C2A655A3900FC4236 /* LookUpOO.swift in Sources */,
 				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
 				35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */,
 				35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */,
@@ -304,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CAFE522A65308300FC4236 /* FreeDictionaryServiceTests.swift in Sources */,
+				35CAFE5E2A66591B00FC4236 /* LookUpOOTests.swift in Sources */,
 				35CAFE342A65162100FC4236 /* FlashcardAutomaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

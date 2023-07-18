@@ -9,25 +9,36 @@ import Foundation
 import Combine
 
 struct FreeDictionaryService {
-    private func url(for entry: String) -> URL {
-        urlComponents(for: entry).url!
+    private func url(for input: String) -> URL {
+        urlComponents(for: input).url!
     }
     
-    private func urlComponents(for entry: String) -> URLComponents {
+    private func urlComponents(for input: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.dictionaryapi.dev"
-        components.path = "/api/v2/entries/en/\(entry)"
+        components.path = "/api/v2/entries/en/\(input)"
         
         return components
     }
 }
 
 extension FreeDictionaryService: FreeDictionaryServiceProtocol {
-    func entryPublisher(for entry: String) -> AnyPublisher<Data, URLError> {
+    func entriesPublisher(for input: String) -> AnyPublisher<Data, URLError> {
         URLSession.shared
-            .dataTaskPublisher(for: url(for: entry))
+            .dataTaskPublisher(for: url(for: input))
             .map(\.data)
             .eraseToAnyPublisher()
+    }
+    
+    func lookUpEntries(with input: String) async throws -> Data {
+        let asyncSequence = entriesPublisher(for: input).values
+        
+        for try await value in asyncSequence {
+            return value
+        }
+        
+        assertionFailure("We should never arrive here!")
+        return Data()
     }
 }
