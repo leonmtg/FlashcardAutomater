@@ -9,12 +9,12 @@ import XCTest
 @testable import FlashcardAutomater
 
 final class LookUpOOTests: XCTestCase {
-    var lookUpOO: LookUpOO!
+    var lookUpOO: LookupOO!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        lookUpOO = LookUpOO()
+        lookUpOO = LookupOO()
     }
 
     override func tearDownWithError() throws {

@@ -12,7 +12,7 @@ struct ErrorForView: Error {
     var message = ""
 }
 
-class LookUpOO: ObservableObject {
+class LookupOO: ObservableObject {
     private let service: FreeDictionaryServiceProtocol
     
     private var currentInput: String?
