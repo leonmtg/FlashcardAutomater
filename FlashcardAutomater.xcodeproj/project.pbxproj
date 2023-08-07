@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		350AB22B2A667030009D3D43 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB22A2A667030009D3D43 /* HTTPResponseError.swift */; };
 		350AB22F2A669D19009D3D43 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB22E2A669D19009D3D43 /* LookupView.swift */; };
+		35C823B02A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823AF2A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift */; };
+		35C823B22A80CCE5006BBFC0 /* AnkiConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823B12A80CCE5006BBFC0 /* AnkiConnectService.swift */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
 		35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE292A65162100FC4236 /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		350AB22A2A667030009D3D43 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		350AB22E2A669D19009D3D43 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
+		35C823AF2A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiConnectServiceProtocol.swift; sourceTree = "<group>"; };
+		35C823B12A80CCE5006BBFC0 /* AnkiConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiConnectService.swift; sourceTree = "<group>"; };
 		35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardAutomater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterApp.swift; sourceTree = "<group>"; };
 		35CAFE252A65162100FC4236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			children = (
 				35CAFE4D2A6528A700FC4236 /* FreeDictionaryService.swift */,
 				35CAFE4F2A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift */,
+				35C823B12A80CCE5006BBFC0 /* AnkiConnectService.swift */,
+				35C823AF2A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C823B02A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift in Sources */,
+				35C823B22A80CCE5006BBFC0 /* AnkiConnectService.swift in Sources */,
 				35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */,
 				35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */,
 				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
