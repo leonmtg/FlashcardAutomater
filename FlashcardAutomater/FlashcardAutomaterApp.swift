@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct FlashcardAutomaterApp: App {
+    let storageProvider = StorageProvider()
+    
     var body: some Scene {
         WindowGroup {
-            LookupsView()
+            LookupsView(lookupsOO: LookupsOO(storageProvider: storageProvider))
         }
     }
 }
