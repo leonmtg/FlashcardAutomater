@@ -13,6 +13,8 @@ struct LookupsView: View {
     @FetchRequest(fetchRequest: Lookup.lookupsByUpdateDate)
     var lookups: FetchedResults<Lookup>
     
+    @State private var creatingNewLookup = false
+    
     var body: some View {
         NavigationStack {
             List(lookups) { lookup in
@@ -28,9 +30,12 @@ struct LookupsView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        creatingNewLookup = true
                     } label: {
                         Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $creatingNewLookup) {
+                        NewLookupView()
                     }
                 }
             }
