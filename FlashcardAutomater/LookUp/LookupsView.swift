@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct LookupsView: View {
-    @ObservedObject var lookupsOO: LookupsOO
+    @StateObject private var lookupsOO = LookupsOO()
+    
+    @FetchRequest(fetchRequest: Lookup.lookupsByUpdateDate)
+    var lookups: FetchedResults<Lookup>
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if lookups.count > 0 {
+            List(lookups) { lookup in
+                Text(lookup.input ?? "--")
+            }
+        } else {
+            Text("Nothing here...")
+        }
+        
     }
 }
 
 struct LookupsView_Previews: PreviewProvider {
-    static let lookupsOO = LookupsOO(storageProvider: StorageProvider())
-    
     static var previews: some View {
-        LookupsView(lookupsOO: lookupsOO)
+        LookupsView()
     }
 }

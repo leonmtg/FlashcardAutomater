@@ -13,7 +13,8 @@ struct FlashcardAutomaterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LookupsView(lookupsOO: LookupsOO(storageProvider: storageProvider))
+            LookupsView()
+                .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
         }
     }
 }
