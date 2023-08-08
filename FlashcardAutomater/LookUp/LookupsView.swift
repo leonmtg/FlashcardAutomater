@@ -14,14 +14,27 @@ struct LookupsView: View {
     var lookups: FetchedResults<Lookup>
     
     var body: some View {
-        if lookups.count > 0 {
+        NavigationStack {
             List(lookups) { lookup in
                 Text(lookup.input ?? "--")
             }
-        } else {
-            Text("Nothing here...")
+            .overlay {
+                if lookups.isEmpty {
+                    Text("Oops, looks like there's no data...")
+                }
+            }
+            .navigationTitle("Lookups")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
-        
     }
 }
 
