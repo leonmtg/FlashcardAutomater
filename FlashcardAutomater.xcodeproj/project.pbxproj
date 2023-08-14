@@ -15,7 +15,8 @@
 		35C823B82A80D043006BBFC0 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823B72A80D043006BBFC0 /* StorageProvider.swift */; };
 		35C823BA2A82236B006BBFC0 /* Lookup+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823B92A82236B006BBFC0 /* Lookup+.swift */; };
 		35C823BC2A8233CC006BBFC0 /* NewLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BB2A8233CC006BBFC0 /* NewLookupView.swift */; };
-		35C823BE2A8262EC006BBFC0 /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BD2A8262EC006BBFC0 /* EntriesView.swift */; };
+		35C823BE2A8262EC006BBFC0 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BD2A8262EC006BBFC0 /* EntryView.swift */; };
+		35C823C02A8A0D54006BBFC0 /* MeaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
 		35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE292A65162100FC4236 /* Preview Assets.xcassets */; };
@@ -61,7 +62,8 @@
 		35C823B72A80D043006BBFC0 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		35C823B92A82236B006BBFC0 /* Lookup+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lookup+.swift"; sourceTree = "<group>"; };
 		35C823BB2A8233CC006BBFC0 /* NewLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLookupView.swift; sourceTree = "<group>"; };
-		35C823BD2A8262EC006BBFC0 /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
+		35C823BD2A8262EC006BBFC0 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningView.swift; sourceTree = "<group>"; };
 		35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardAutomater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterApp.swift; sourceTree = "<group>"; };
 		35CAFE252A65162100FC4236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,9 +129,10 @@
 				35F222F62A78EECB0014DD59 /* LookupsView.swift */,
 				35F222F82A78F0670014DD59 /* LookupsOO.swift */,
 				35C823BB2A8233CC006BBFC0 /* NewLookupView.swift */,
-				350AB22E2A669D19009D3D43 /* LookupView.swift */,
-				35C823BD2A8262EC006BBFC0 /* EntriesView.swift */,
 				35CAFE5B2A655A3900FC4236 /* LookupOO.swift */,
+				350AB22E2A669D19009D3D43 /* LookupView.swift */,
+				35C823BD2A8262EC006BBFC0 /* EntryView.swift */,
+				35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */,
 				350AB2292A666C82009D3D43 /* DataObjects */,
 			);
 			path = LookUp;
@@ -361,7 +364,8 @@
 				35CAFE5C2A655A3900FC4236 /* LookupOO.swift in Sources */,
 				35F222F72A78EECB0014DD59 /* LookupsView.swift in Sources */,
 				35C823B62A80CF1F006BBFC0 /* Model.xcdatamodeld in Sources */,
-				35C823BE2A8262EC006BBFC0 /* EntriesView.swift in Sources */,
+				35C823BE2A8262EC006BBFC0 /* EntryView.swift in Sources */,
+				35C823C02A8A0D54006BBFC0 /* MeaningView.swift in Sources */,
 				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
 				35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */,
 				35C823BC2A8233CC006BBFC0 /* NewLookupView.swift in Sources */,

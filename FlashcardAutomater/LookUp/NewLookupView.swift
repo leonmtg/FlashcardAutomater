@@ -22,8 +22,18 @@ struct NewLookupView: View {
                     
                 }
                 .disabled(lookupOO.loading)
+                
+                if lookupOO.entries.count > 0 {
+                    LazyVStack {
+                        ForEach(lookupOO.entries) { entry in
+                            EntryView(entry: entry)
+                        }
+                    }
+                } else {
+                    Text("Looks like no entries here...")
+                }
+               
                 Spacer()
-                EntriesView(lookupOO: lookupOO)
             }
             .padding(20)
             .navigationTitle("New Lookup")

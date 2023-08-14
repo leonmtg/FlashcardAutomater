@@ -60,6 +60,6 @@ class LookupOO: ObservableObject {
             fetching = false
         }
                 
-        return  try await self.service.lookUpEntries(with: input)
+        return try await self.service.lookUpEntries(with: input)
     }
 }

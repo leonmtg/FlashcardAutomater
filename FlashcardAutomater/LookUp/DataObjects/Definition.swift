@@ -13,3 +13,18 @@ struct Definition: Decodable {
     var synonyms: [String]
     var antonyms: [String]
 }
+
+extension Definition {
+    static let mock: Definition = {
+        let json = """
+{
+            "definition": "A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.",
+            "synonyms": [],
+            "antonyms": [],
+            "example": "Hello? Is anyone there?"
+          }
+"""
+        let jsonData = json.data(using: .utf8)!
+        return try! JSONDecoder().decode(Definition.self, from: jsonData)
+    }()
+}
