@@ -11,11 +11,10 @@ struct EntryView: View {
     var entry: Entry
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Text("\(entry.word)")
                 .fontWeight(.bold)
-            
-            VStack(alignment:.leading) {
+            VStack(alignment: .leading, spacing: 20) {
                 ForEach(entry.meanings) { meaning in
                     MeaningView(meaning: meaning)
                 }
