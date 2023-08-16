@@ -27,6 +27,7 @@ class LookupOO: ObservableObject {
             }
         }
     }
+    // TODO: Maybe I can use a better solution here: https://www.swiftbysundell.com/articles/handling-loading-states-in-swiftui/
     @Published var loading = false
     
     init(service: FreeDictionaryServiceProtocol = FreeDictionaryService()) {
