@@ -18,24 +18,39 @@ struct NewLookupView: View {
             VStack(spacing: 20) {
                 TextField("Here is text", text: $input)
                     .textFieldStyle(.roundedBorder)
+                    .textInputAutocapitalization(.never)
+                    .padding([.top, .leading, .trailing], 20)
                 Button("Look Up!") {
-                    
+                    lookupOO.lookUp(with: input)
                 }
-                .disabled(lookupOO.loading)
+                .disabled(lookupOO.loading || input.count <= 0)
                 
-                if lookupOO.entries.count > 0 {
-                    LazyVStack {
-                        ForEach(lookupOO.entries) { entry in
-                            EntryView(entry: entry)
+                if lookupOO.loading {
+                    ProgressView()
+                } else {
+                    if let error = lookupOO.errorForView {
+                        Text(error.message)
+                    } else if (lookupOO.entries.isEmpty) {
+                        Text("Looks like no entries here...")
+                    } else {
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(lookupOO.entries) { entry in
+                                    EntryView(entry: entry)
+                                }
+                            }
+                            .padding([.leading, .trailing], 20)
+                        }
+                        .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
+                            Color.clear
+                                .frame(height: 20)
                         }
                     }
-                } else {
-                    Text("Looks like no entries here...")
                 }
-               
+                
                 Spacer()
             }
-            .padding(20)
+            .ignoresSafeArea(edges: .bottom)
             .navigationTitle("New Lookup")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
