@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct ErrorForView: Error {
     let id = UUID()
@@ -17,24 +18,31 @@ class LookupOO: ObservableObject {
     
     private var currentInput: String?
     @Published var entries: [Entry] = []
+    @Published var entriesHtml: String = ""
     @Published var errorForView: ErrorForView?
-    private var fetching = false {
-        didSet {
-            Task {
-                await MainActor.run {
-                    loading = fetching
-                }
-            }
-        }
-    }
+    private var fetching = false
+    
     // TODO: Maybe I can use a better solution here: https://www.swiftbysundell.com/articles/handling-loading-states-in-swiftui/
     @Published var loading = false
     
+    private var cancellable: AnyCancellable?
+    
     init(service: FreeDictionaryServiceProtocol = FreeDictionaryService()) {
         self.service = service
+        
+        cancellable = $entries
+            .map { entries in
+                MarkdownToHTMLConverter.convertMarkdownSupportedArray(entries, separator: "<br />")
+            }
+            .sink { [unowned self] html in
+                self.entriesHtml = html
+                self.loading = false
+            }
     }
     
     func lookUp(with input: String) {
+        loading = true
+        
         Task {
             do {
                 let fetchedEntries = try await lookUp(with: input)

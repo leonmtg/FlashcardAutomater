@@ -18,6 +18,10 @@
 		35C823BE2A8262EC006BBFC0 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BD2A8262EC006BBFC0 /* EntryView.swift */; };
 		35C823C02A8A0D54006BBFC0 /* MeaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */; };
 		35C823C22A8A26D2006BBFC0 /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C12A8A26D2006BBFC0 /* DefinitionView.swift */; };
+		35C823C42A8E0502006BBFC0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C32A8E0502006BBFC0 /* WebView.swift */; };
+		35C823C72A8E0711006BBFC0 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35C823C62A8E0711006BBFC0 /* MarkdownKit */; };
+		35C823CA2A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */; };
+		35C823CC2A8E0A3F006BBFC0 /* MarkdownSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
 		35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE292A65162100FC4236 /* Preview Assets.xcassets */; };
@@ -66,6 +70,9 @@
 		35C823BD2A8262EC006BBFC0 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningView.swift; sourceTree = "<group>"; };
 		35C823C12A8A26D2006BBFC0 /* DefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionView.swift; sourceTree = "<group>"; };
+		35C823C32A8E0502006BBFC0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownToHTMLConverter.swift; sourceTree = "<group>"; };
+		35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownSupported.swift; sourceTree = "<group>"; };
 		35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardAutomater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterApp.swift; sourceTree = "<group>"; };
 		35CAFE252A65162100FC4236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C823C72A8E0711006BBFC0 /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +144,7 @@
 				35C823BD2A8262EC006BBFC0 /* EntryView.swift */,
 				35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */,
 				35C823C12A8A26D2006BBFC0 /* DefinitionView.swift */,
+				35C823C32A8E0502006BBFC0 /* WebView.swift */,
 				350AB2292A666C82009D3D43 /* DataObjects */,
 			);
 			path = LookUp;
@@ -149,6 +158,15 @@
 				35C823B92A82236B006BBFC0 /* Lookup+.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		35C823C82A8E093D006BBFC0 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */,
+				35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */,
+			);
+			path = Converter;
 			sourceTree = "<group>";
 		};
 		35CAFE152A65162000FC4236 = {
@@ -175,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */,
+				35C823C82A8E093D006BBFC0 /* Converter */,
 				35C823B32A80CEBB006BBFC0 /* Storage */,
 				350AB2322A669D58009D3D43 /* LookUp */,
 				350AB22A2A667030009D3D43 /* HTTPResponseError.swift */,
@@ -240,6 +259,9 @@
 			dependencies = (
 			);
 			name = FlashcardAutomater;
+			packageProductDependencies = (
+				35C823C62A8E0711006BBFC0 /* MarkdownKit */,
+			);
 			productName = FlashcardAutomater;
 			productReference = 35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */;
 			productType = "com.apple.product-type.application";
@@ -312,6 +334,9 @@
 				Base,
 			);
 			mainGroup = 35CAFE152A65162000FC4236;
+			packageReferences = (
+				35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
+			);
 			productRefGroup = 35CAFE1F2A65162000FC4236 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +385,7 @@
 				35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */,
 				35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */,
 				35CAFE502A6528F400FC4236 /* FreeDictionaryServiceProtocol.swift in Sources */,
+				35C823CA2A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift in Sources */,
 				35C823BA2A82236B006BBFC0 /* Lookup+.swift in Sources */,
 				350AB22F2A669D19009D3D43 /* LookupView.swift in Sources */,
 				350AB22B2A667030009D3D43 /* HTTPResponseError.swift in Sources */,
@@ -372,9 +398,11 @@
 				35C823C02A8A0D54006BBFC0 /* MeaningView.swift in Sources */,
 				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
 				35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */,
+				35C823CC2A8E0A3F006BBFC0 /* MarkdownSupported.swift in Sources */,
 				35C823BC2A8233CC006BBFC0 /* NewLookupView.swift in Sources */,
 				35F222F92A78F0670014DD59 /* LookupsOO.swift in Sources */,
 				35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */,
+				35C823C42A8E0502006BBFC0 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +756,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-markdownkit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35C823C62A8E0711006BBFC0 /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			productName = MarkdownKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		35C823B42A80CF1F006BBFC0 /* Model.xcdatamodeld */ = {

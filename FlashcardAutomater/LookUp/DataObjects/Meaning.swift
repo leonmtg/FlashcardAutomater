@@ -20,6 +20,13 @@ struct Meaning: Decodable, Identifiable {
     }
 }
 
+extension Meaning: MarkdownSupported {
+    var markdownText: String {
+        let definitionTexts = definitions.map { $0.markdownText }.joined(separator: "<br />")
+        return "***\(partOfSpeech)*** \n<br />\(definitionTexts)"
+    }
+}
+
 extension Meaning {
     static let mock: Meaning = {
         let json = """

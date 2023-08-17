@@ -14,6 +14,16 @@ struct Definition: Decodable {
     var antonyms: [String]
 }
 
+extension Definition: MarkdownSupported {
+    var markdownText: String {
+        var text = definition
+        if let example {
+            text.append("<br />• \(example)")
+        }
+        return text
+    }
+}
+
 extension Definition {
     static let mock: Definition = {
         let json = """

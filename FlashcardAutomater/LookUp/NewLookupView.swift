@@ -33,18 +33,19 @@ struct NewLookupView: View {
                     } else if (lookupOO.entries.isEmpty) {
                         Text("Looks like no entries here...")
                     } else {
-                        ScrollView {
-                            LazyVStack {
-                                ForEach(lookupOO.entries) { entry in
-                                    EntryView(entry: entry)
-                                }
-                            }
-                            .padding([.leading, .trailing], 20)
-                        }
-                        .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
-                            Color.clear
-                                .frame(height: 20)
-                        }
+//                        ScrollView {
+//                            LazyVStack {
+//                                ForEach(lookupOO.entries) { entry in
+//                                    EntryView(entry: entry)
+//                                }
+//                            }
+//                            .padding([.leading, .trailing], 20)
+//                        }
+//                        .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
+//                            Color.clear
+//                                .frame(height: 20)
+//                        }
+                        WebView(html: lookupOO.entriesHtml)
                     }
                 }
                 
