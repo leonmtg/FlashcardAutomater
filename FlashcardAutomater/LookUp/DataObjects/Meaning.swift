@@ -22,8 +22,30 @@ struct Meaning: Decodable, Identifiable {
 
 extension Meaning: MarkdownSupported {
     var markdownText: String {
-        let definitionTexts = definitions.map { $0.markdownText }.joined(separator: "<br />")
-        return "***\(partOfSpeech)*** \n<br />\(definitionTexts)"
+        var text = "***\(partOfSpeech)***"
+        let hasIndex = definitions.count > 1
+        let definitionTexts = definitions.enumerated()
+            .map { index, definition in
+                if hasIndex {
+                    return "**\(index + 1)** \(definition.markdownText)"
+                } else {
+                    return definition.markdownText
+                }
+            }
+            .joined(separator: "<br />")
+        
+        text.append("\n<br />\(definitionTexts)")
+        
+        if synonyms.count > 0 {
+            text.append("<br /> SYNONYMS ")
+            text.append(synonyms.map { "**\($0)**" }.joined(separator: ", "))
+        }
+        if antonyms.count > 0 {
+            text.append("<br /> ANTONYMS ")
+            text.append(antonyms.map { "**\($0)**" }.joined(separator: ", "))
+        }
+        
+        return text
     }
 }
 

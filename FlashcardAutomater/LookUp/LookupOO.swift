@@ -32,7 +32,7 @@ class LookupOO: ObservableObject {
         
         cancellable = $entries
             .map { entries in
-                MarkdownToHTMLConverter.convertMarkdownSupportedArray(entries, separator: "<br />")
+                MarkdownToHTMLConverter.convertMarkdownSupportedArray(entries, separator: "\n\n")
             }
             .sink { [unowned self] html in
                 self.entriesHtml = html

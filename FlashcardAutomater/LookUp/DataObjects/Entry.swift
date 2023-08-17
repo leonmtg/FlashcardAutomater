@@ -24,7 +24,7 @@ struct Entry: Decodable, Identifiable {
 extension Entry: MarkdownSupported {
     var markdownText: String {
         let meaningTexts = meanings.map { $0.markdownText }.joined(separator: "<br />")
-        return "# \(word) \n\(meaningTexts)"
+        return "## \(word)\n\(meaningTexts)"
     }
 }
 

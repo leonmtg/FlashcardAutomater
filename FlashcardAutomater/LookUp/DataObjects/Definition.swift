@@ -17,8 +17,16 @@ struct Definition: Decodable {
 extension Definition: MarkdownSupported {
     var markdownText: String {
         var text = definition
+        if synonyms.count > 0 {
+            text.append("<br /> SYNONYMS ")
+            text.append(synonyms.map { "**\($0)**" }.joined(separator: ", "))
+        }
+        if antonyms.count > 0 {
+            text.append("<br /> ANTONYMS ")
+            text.append(antonyms.map { "**\($0)**" }.joined(separator: ", "))
+        }
         if let example {
-            text.append("<br />• \(example)")
+            text.append("<br />• <span style=\"color: rgb(0, 85, 127);\">*\(example)*</span>")
         }
         return text
     }
