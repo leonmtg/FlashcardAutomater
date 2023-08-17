@@ -22,6 +22,12 @@
 		35C823C72A8E0711006BBFC0 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35C823C62A8E0711006BBFC0 /* MarkdownKit */; };
 		35C823CA2A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */; };
 		35C823CC2A8E0A3F006BBFC0 /* MarkdownSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */; };
+		35C823D42A8E2E8B006BBFC0 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823CE2A8E2E8B006BBFC0 /* StyleSheet.swift */; };
+		35C823D52A8E2E8B006BBFC0 /* ulysses.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823CF2A8E2E8B006BBFC0 /* ulysses.css */; };
+		35C823D62A8E2E8B006BBFC0 /* github.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D02A8E2E8B006BBFC0 /* github.css */; };
+		35C823D72A8E2E8B006BBFC0 /* solarizeddark.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D12A8E2E8B006BBFC0 /* solarizeddark.css */; };
+		35C823D82A8E2E8B006BBFC0 /* lopash.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D22A8E2E8B006BBFC0 /* lopash.css */; };
+		35C823D92A8E2E8B006BBFC0 /* raywenderlich.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D32A8E2E8B006BBFC0 /* raywenderlich.css */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
 		35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE292A65162100FC4236 /* Preview Assets.xcassets */; };
@@ -73,6 +79,12 @@
 		35C823C32A8E0502006BBFC0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownToHTMLConverter.swift; sourceTree = "<group>"; };
 		35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownSupported.swift; sourceTree = "<group>"; };
+		35C823CE2A8E2E8B006BBFC0 /* StyleSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		35C823CF2A8E2E8B006BBFC0 /* ulysses.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ulysses.css; sourceTree = "<group>"; };
+		35C823D02A8E2E8B006BBFC0 /* github.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = github.css; sourceTree = "<group>"; };
+		35C823D12A8E2E8B006BBFC0 /* solarizeddark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = solarizeddark.css; sourceTree = "<group>"; };
+		35C823D22A8E2E8B006BBFC0 /* lopash.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lopash.css; sourceTree = "<group>"; };
+		35C823D32A8E2E8B006BBFC0 /* raywenderlich.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = raywenderlich.css; sourceTree = "<group>"; };
 		35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardAutomater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAutomaterApp.swift; sourceTree = "<group>"; };
 		35CAFE252A65162100FC4236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +181,19 @@
 			path = Converter;
 			sourceTree = "<group>";
 		};
+		35C823CD2A8E2E8B006BBFC0 /* StyleSheets */ = {
+			isa = PBXGroup;
+			children = (
+				35C823CE2A8E2E8B006BBFC0 /* StyleSheet.swift */,
+				35C823CF2A8E2E8B006BBFC0 /* ulysses.css */,
+				35C823D02A8E2E8B006BBFC0 /* github.css */,
+				35C823D12A8E2E8B006BBFC0 /* solarizeddark.css */,
+				35C823D22A8E2E8B006BBFC0 /* lopash.css */,
+				35C823D32A8E2E8B006BBFC0 /* raywenderlich.css */,
+			);
+			path = StyleSheets;
+			sourceTree = "<group>";
+		};
 		35CAFE152A65162000FC4236 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +224,7 @@
 				350AB22A2A667030009D3D43 /* HTTPResponseError.swift */,
 				35CAFE4C2A65288B00FC4236 /* Services */,
 				35CAFE252A65162100FC4236 /* Assets.xcassets */,
+				35C823CD2A8E2E8B006BBFC0 /* StyleSheets */,
 				35CAFE272A65162100FC4236 /* FlashcardAutomater.entitlements */,
 				35CAFE282A65162100FC4236 /* Preview Content */,
 			);
@@ -353,7 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C823D82A8E2E8B006BBFC0 /* lopash.css in Resources */,
+				35C823D62A8E2E8B006BBFC0 /* github.css in Resources */,
+				35C823D72A8E2E8B006BBFC0 /* solarizeddark.css in Resources */,
 				35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */,
+				35C823D92A8E2E8B006BBFC0 /* raywenderlich.css in Resources */,
+				35C823D52A8E2E8B006BBFC0 /* ulysses.css in Resources */,
 				35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C823B02A80CCD9006BBFC0 /* AnkiConnectServiceProtocol.swift in Sources */,
+				35C823D42A8E2E8B006BBFC0 /* StyleSheet.swift in Sources */,
 				35C823B22A80CCE5006BBFC0 /* AnkiConnectService.swift in Sources */,
 				35C823B82A80D043006BBFC0 /* StorageProvider.swift in Sources */,
 				35CAFE542A654F4F00FC4236 /* Entry.swift in Sources */,

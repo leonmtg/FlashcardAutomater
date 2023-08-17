@@ -9,11 +9,16 @@ import SwiftUI
 import WebKit
 
 struct WebView {
+    @AppStorage("styleSheet") var styleSheet: StyleSheet = .raywenderlich
+    
     var html: String
     
     private var formattedHtml: String {
-      return """
+        return """
           <html>
+                  <head>
+                     <link href="\(styleSheet).css" rel="stylesheet">
+                  </head>
           <body>
              \(html)
           </body>
