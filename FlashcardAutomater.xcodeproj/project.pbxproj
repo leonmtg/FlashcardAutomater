@@ -19,7 +19,6 @@
 		35C823C02A8A0D54006BBFC0 /* MeaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823BF2A8A0D54006BBFC0 /* MeaningView.swift */; };
 		35C823C22A8A26D2006BBFC0 /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C12A8A26D2006BBFC0 /* DefinitionView.swift */; };
 		35C823C42A8E0502006BBFC0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C32A8E0502006BBFC0 /* WebView.swift */; };
-		35C823C72A8E0711006BBFC0 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35C823C62A8E0711006BBFC0 /* MarkdownKit */; };
 		35C823CA2A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823C92A8E09F1006BBFC0 /* MarkdownToHTMLConverter.swift */; };
 		35C823CC2A8E0A3F006BBFC0 /* MarkdownSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823CB2A8E0A3F006BBFC0 /* MarkdownSupported.swift */; };
 		35C823D42A8E2E8B006BBFC0 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C823CE2A8E2E8B006BBFC0 /* StyleSheet.swift */; };
@@ -28,6 +27,7 @@
 		35C823D72A8E2E8B006BBFC0 /* solarizeddark.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D12A8E2E8B006BBFC0 /* solarizeddark.css */; };
 		35C823D82A8E2E8B006BBFC0 /* lopash.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D22A8E2E8B006BBFC0 /* lopash.css */; };
 		35C823D92A8E2E8B006BBFC0 /* raywenderlich.css in Resources */ = {isa = PBXBuildFile; fileRef = 35C823D32A8E2E8B006BBFC0 /* raywenderlich.css */; };
+		35C823DC2A8F4E36006BBFC0 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35C823DB2A8F4E36006BBFC0 /* MarkdownKit */; };
 		35CAFE222A65162000FC4236 /* FlashcardAutomaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE212A65162000FC4236 /* FlashcardAutomaterApp.swift */; };
 		35CAFE262A65162100FC4236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE252A65162100FC4236 /* Assets.xcassets */; };
 		35CAFE2A2A65162100FC4236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAFE292A65162100FC4236 /* Preview Assets.xcassets */; };
@@ -113,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35C823C72A8E0711006BBFC0 /* MarkdownKit in Frameworks */,
+				35C823DC2A8F4E36006BBFC0 /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +286,7 @@
 			);
 			name = FlashcardAutomater;
 			packageProductDependencies = (
-				35C823C62A8E0711006BBFC0 /* MarkdownKit */,
+				35C823DB2A8F4E36006BBFC0 /* MarkdownKit */,
 			);
 			productName = FlashcardAutomater;
 			productReference = 35CAFE1E2A65162000FC4236 /* FlashcardAutomater.app */;
@@ -361,7 +361,7 @@
 			);
 			mainGroup = 35CAFE152A65162000FC4236;
 			packageReferences = (
-				35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
+				35C823DA2A8F4E36006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
 			);
 			productRefGroup = 35CAFE1F2A65162000FC4236 /* Products */;
 			projectDirPath = "";
@@ -790,7 +790,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
+		35C823DA2A8F4E36006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/objecthub/swift-markdownkit";
 			requirement = {
@@ -801,9 +801,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		35C823C62A8E0711006BBFC0 /* MarkdownKit */ = {
+		35C823DB2A8F4E36006BBFC0 /* MarkdownKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 35C823C52A8E0711006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			package = 35C823DA2A8F4E36006BBFC0 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
 			productName = MarkdownKit;
 		};
 /* End XCSwiftPackageProductDependency section */
