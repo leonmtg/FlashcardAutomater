@@ -25,45 +25,42 @@ struct NewLookupView: View {
                 }
                 .disabled(lookupOO.loading || input.count <= 0)
                 
-                if lookupOO.loading {
-                    Spacer()
-                        .overlay {
-                            ProgressView()
+                if !lookupOO.loading && lookupOO.entries.count > 0 {
+                    /*
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(lookupOO.entries) { entry in
+                                EntryView(entry: entry)
+                            }
                         }
-                } else {
-                    if let error = lookupOO.errorForView {
+                        .padding([.leading, .trailing], 20)
+                    }
+                    .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
                         Color.clear
-                            .overlay {
-                                Text(error.message)
-                                    .offset(y: -44)
-                            }
-                    } else if (lookupOO.entries.isEmpty) {
-                        Color.clear
-                            .overlay(alignment: .center) {
-                                Text("Looks like no entries here...")
-                                    .offset(y: -44)
-                            }
-                    } else {
-                        /*
-                        ScrollView {
-                            LazyVStack {
-                                ForEach(lookupOO.entries) { entry in
-                                    EntryView(entry: entry)
-                                }
-                            }
-                            .padding([.leading, .trailing], 20)
-                        }
+                            .frame(height: 20)
+                    }
+                     */
+                    WebView(html: lookupOO.entriesHtml)
                         .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
                             Color.clear
-                                .frame(height: 20)
+                                .frame(height: 4)
                         }
-                         */
-                        WebView(html: lookupOO.entriesHtml)
-                            .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
-                                Color.clear
-                                    .frame(height: 4)
+                } else {
+                    Color.clear
+                        .overlay {
+                            if lookupOO.loading {
+                                ProgressView()
+                            } else if let error = lookupOO.errorForView {
+                                Text(error.message)
+                                    .offset(y: -44)
+                            } else if lookupOO.entries.isEmpty {
+                                Text("Looks like no entries here...")
+                                    .offset(y: -44)
+                            } else {
+                                Text("Unknown error...")
+                                    .offset(y: -44)
                             }
-                    }
+                        }
                 }
             }
             .ignoresSafeArea(edges: .bottom)
