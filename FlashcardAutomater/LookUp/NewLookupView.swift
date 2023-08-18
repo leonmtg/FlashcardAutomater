@@ -26,12 +26,23 @@ struct NewLookupView: View {
                 .disabled(lookupOO.loading || input.count <= 0)
                 
                 if lookupOO.loading {
-                    ProgressView()
+                    Spacer()
+                        .overlay {
+                            ProgressView()
+                        }
                 } else {
                     if let error = lookupOO.errorForView {
-                        Text(error.message)
+                        Color.clear
+                            .overlay {
+                                Text(error.message)
+                                    .offset(y: -44)
+                            }
                     } else if (lookupOO.entries.isEmpty) {
-                        Text("Looks like no entries here...")
+                        Color.clear
+                            .overlay(alignment: .center) {
+                                Text("Looks like no entries here...")
+                                    .offset(y: -44)
+                            }
                     } else {
                         /*
                         ScrollView {
@@ -48,10 +59,12 @@ struct NewLookupView: View {
                         }
                          */
                         WebView(html: lookupOO.entriesHtml)
+                            .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
+                                Color.clear
+                                    .frame(height: 4)
+                            }
                     }
                 }
-                
-                Spacer()
             }
             .ignoresSafeArea(edges: .bottom)
             .navigationTitle("New Lookup")
