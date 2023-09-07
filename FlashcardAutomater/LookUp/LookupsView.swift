@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LookupsView: View {
-    @StateObject private var lookupsOO = LookupsOO()
+    @Environment(\.managedObjectContext) var context
     
     @FetchRequest(fetchRequest: Lookup.lookupsByUpdateDate)
     var lookups: FetchedResults<Lookup>
@@ -35,7 +35,7 @@ struct LookupsView: View {
                         Image(systemName: "plus")
                     }
                     .sheet(isPresented: $creatingNewLookup) {
-                        NewLookupView()
+                        NewLookupView(lookupOO: LookupOO(context: context))
                     }
                 }
             }

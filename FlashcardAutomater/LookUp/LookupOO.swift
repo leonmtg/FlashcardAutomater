@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CoreData
 
 struct ErrorForView: Error {
     let id = UUID()
@@ -15,8 +16,10 @@ struct ErrorForView: Error {
 
 class LookupOO: ObservableObject {
     private let service: FreeDictionaryServiceProtocol
+    private let context: NSManagedObjectContext
     
     private var currentInput: String?
+    
     @Published var entries: [Entry] = []
     @Published var entriesHtml: String = ""
     @Published var errorForView: ErrorForView?
@@ -27,7 +30,12 @@ class LookupOO: ObservableObject {
     
     private var cancellable: AnyCancellable?
     
-    init(service: FreeDictionaryServiceProtocol = FreeDictionaryService()) {
+    init(service: FreeDictionaryServiceProtocol = FreeDictionaryService(), context: NSManagedObjectContext? = nil) {
+        guard let context = context else {
+            fatalError("Attempting to create a managed object that not passing a context explicitly")
+        }
+        
+        self.context = context
         self.service = service
         
         cancellable = $entries
@@ -74,5 +82,28 @@ class LookupOO: ObservableObject {
         }
                 
         return try await self.service.lookUpEntries(with: input)
+    }
+    
+    func saveLookup() {
+        guard let input = self.currentInput else {
+            fatalError("Attempting to create a managed object while not having a 'input'")
+        }
+        guard !self.entriesHtml.isEmpty else {
+            fatalError("Attempting to create a managed object while not having a 'entriesHtml'")
+        }
+        
+        let lookup = Lookup(context: self.context)
+        
+        lookup.input = input
+        lookup.html = self.entriesHtml
+        lookup.updateDate = Date()
+        
+        do {
+            try self.context.save()
+            print("Lookup saved succesfully")
+        } catch {
+            self.context.rollback()
+            print("Failed to save lookup: \(error)")
+        }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct NewLookupView: View {
     @Environment(\.dismiss) var dismiss
     
-    @StateObject private var lookupOO = LookupOO()
+    @ObservedObject var lookupOO: LookupOO
     @State private var input = ""
     
     var body: some View {
@@ -26,20 +26,6 @@ struct NewLookupView: View {
                 .disabled(lookupOO.loading || input.count <= 0)
                 
                 if !lookupOO.loading && lookupOO.entries.count > 0 {
-                    /*
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(lookupOO.entries) { entry in
-                                EntryView(entry: entry)
-                            }
-                        }
-                        .padding([.leading, .trailing], 20)
-                    }
-                    .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
-                        Color.clear
-                            .frame(height: 20)
-                    }
-                     */
                     WebView(html: lookupOO.entriesHtml)
                         .safeAreaInset(edge: .bottom, alignment: .center, spacing: 0) {
                             Color.clear
@@ -73,9 +59,11 @@ struct NewLookupView: View {
                     }
                 }
                 ToolbarItem {
-                    Button("Done") {
+                    Button("Save") {
+                        lookupOO.saveLookup()
                         dismiss()
                     }
+                    .disabled(lookupOO.loading || lookupOO.entriesHtml.isEmpty)
                 }
             }
         }
@@ -85,6 +73,6 @@ struct NewLookupView: View {
 
 struct NewLookupView_Previews: PreviewProvider {
     static var previews: some View {
-        NewLookupView()
+        NewLookupView(lookupOO: LookupOO(context: StorageProvider.preview.persistentContainer.viewContext))
     }
 }

@@ -10,8 +10,12 @@ import CoreData
 final class StorageProvider {
     let persistentContainer: NSPersistentContainer
     
-    init() {
+    init(inMemory: Bool = false) {
         persistentContainer = NSPersistentContainer(name: "Model")
+        
+        if inMemory {
+            persistentContainer.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
+        }
         
         persistentContainer.loadPersistentStores { _, error in
             if let error {
@@ -22,39 +26,11 @@ final class StorageProvider {
 }
 
 extension StorageProvider {
-    func saveLookup(with input: String) {
-        let lookup = Lookup(context: persistentContainer.viewContext)
-        lookup.input = input
-        lookup.updateDate = Date()
+    static var preview: StorageProvider = {
+        let provider = StorageProvider(inMemory: true)
         
-        do {
-            try persistentContainer.viewContext.save()
-            print("Lookup saved succesfully")
-        } catch {
-            persistentContainer.viewContext.rollback()
-            print("Failed to save lookup: \(error)")
-        }
-    }
-    
-    func getAllLookups() -> [Lookup] {
-        let fetchRequest: NSFetchRequest<Lookup> = Lookup.fetchRequest()
+        // TODO: Fill some preview data here!
         
-        do {
-            return try persistentContainer.viewContext.fetch(fetchRequest)
-        } catch {
-            print("Failed to fetch lookups: \(error)")
-            return []
-        }
-    }
-    
-    func deleteLookup(_ lookup: Lookup) {
-        persistentContainer.viewContext.delete(lookup)
-        
-        do {
-            try persistentContainer.viewContext.save()
-        } catch {
-            persistentContainer.viewContext.rollback()
-            print("Failed to save context: \(error)")
-        }
-    }
+        return provider
+    }()
 }
