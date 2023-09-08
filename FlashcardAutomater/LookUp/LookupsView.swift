@@ -35,7 +35,7 @@ struct LookupsView: View {
                         Image(systemName: "plus")
                     }
                     .sheet(isPresented: $creatingNewLookup) {
-                        NewLookupView(lookupOO: LookupOO(context: context))
+                        NewLookupView(lookupOO: NewLookupOO(context: context))
                     }
                 }
             }

@@ -14,7 +14,7 @@ struct ErrorForView: Error {
     var message = ""
 }
 
-class LookupOO: ObservableObject {
+class NewLookupOO: ObservableObject {
     private let service: FreeDictionaryServiceProtocol
     private let context: NSManagedObjectContext
     

@@ -38,7 +38,7 @@
 		35CAFE562A654FA800FC4236 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE552A654FA800FC4236 /* Phonetic.swift */; };
 		35CAFE582A65515C00FC4236 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE572A65515C00FC4236 /* Meaning.swift */; };
 		35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE592A65518000FC4236 /* Definition.swift */; };
-		35CAFE5C2A655A3900FC4236 /* LookupOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE5B2A655A3900FC4236 /* LookupOO.swift */; };
+		35CAFE5C2A655A3900FC4236 /* NewLookupOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE5B2A655A3900FC4236 /* NewLookupOO.swift */; };
 		35CAFE5E2A66591B00FC4236 /* LookUpOOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAFE5D2A66591B00FC4236 /* LookUpOOTests.swift */; };
 		35F222F72A78EECB0014DD59 /* LookupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F222F62A78EECB0014DD59 /* LookupsView.swift */; };
 /* End PBXBuildFile section */
@@ -95,7 +95,7 @@
 		35CAFE552A654FA800FC4236 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
 		35CAFE572A65515C00FC4236 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		35CAFE592A65518000FC4236 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
-		35CAFE5B2A655A3900FC4236 /* LookupOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOO.swift; sourceTree = "<group>"; };
+		35CAFE5B2A655A3900FC4236 /* NewLookupOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLookupOO.swift; sourceTree = "<group>"; };
 		35CAFE5D2A66591B00FC4236 /* LookUpOOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpOOTests.swift; sourceTree = "<group>"; };
 		35F222F62A78EECB0014DD59 /* LookupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +142,7 @@
 			children = (
 				35F222F62A78EECB0014DD59 /* LookupsView.swift */,
 				35C823BB2A8233CC006BBFC0 /* NewLookupView.swift */,
-				35CAFE5B2A655A3900FC4236 /* LookupOO.swift */,
+				35CAFE5B2A655A3900FC4236 /* NewLookupOO.swift */,
 				350AB22E2A669D19009D3D43 /* LookupView.swift */,
 				35C823C32A8E0502006BBFC0 /* WebView.swift */,
 				350AB2292A666C82009D3D43 /* DataObjects */,
@@ -410,7 +410,7 @@
 				350AB22F2A669D19009D3D43 /* LookupView.swift in Sources */,
 				350AB22B2A667030009D3D43 /* HTTPResponseError.swift in Sources */,
 				35CAFE5A2A65518000FC4236 /* Definition.swift in Sources */,
-				35CAFE5C2A655A3900FC4236 /* LookupOO.swift in Sources */,
+				35CAFE5C2A655A3900FC4236 /* NewLookupOO.swift in Sources */,
 				35F222F72A78EECB0014DD59 /* LookupsView.swift in Sources */,
 				35C823B62A80CF1F006BBFC0 /* Model.xcdatamodeld in Sources */,
 				35CAFE4E2A6528A700FC4236 /* FreeDictionaryService.swift in Sources */,
